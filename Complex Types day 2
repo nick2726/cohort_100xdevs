@@ -96,3 +96,62 @@ function greetUser(name, age, gender) {
 }
 
 console.log(greetUser("Harkirat",19, "male"));
+
+
+**************************************************************************************************************
+
+                    Assignment - 4
+
+Write a function that takes an array of numbers as input, and returns a new array with only even values.
+
+------------------------------------------------------------------------------------------
+
+
+function isEven(arr){
+    return arr.filter(num=>num%2==0);
+}
+console.log(isEven([1,2,5,7,8,568,686,256,78,5]))
+
+
+
+
+*********************************************************************************************************************
+
+Assignment #5 
+
+
+Write a function that takes an array of users as inputs and returns only the users who are more than 18 years old
+
+
+-------------------------------------------------------
+function islegal(arr){
+    return arr.filter(age=>age>18);
+}
+console.log(islegal([25,45,12,58,21,33,14,18]))
+
+***************************************************************************************************************
+
+
+- Assignment ~#~6
+    
+    Create a function that takes an array of objects as input,
+    and returns the users whose age > 18 and are male
+
+
+const getAdults=users=>
+      users.filter(user=>user.age>18 && user.gender==="Male");
+
+const users=[
+    {name : "Harkirat",age : 23, gender:"Male"},
+    {name : "Nikhil",age : 58, gender:"Female"},
+    {name : "Abhishek",age : 15, gender:"Male"},
+    {name : "Virat",age : 31, gender:"Male"},
+    {name : "Nikhil",age : 58, gender:"Male"},
+    {name : "Abhishek",age : 52, gender:"Male"}
+];
+
+console.log(getAdults(users));
+
+
+
+**************************************************************************************************************************************
