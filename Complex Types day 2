@@ -1,0 +1,98 @@
+- Assignment #1
+    
+    Write a function that takes a `user` as an input and greets them with their name and age
+***********************************************************************************************************
+
+          ------------Method 1------------
+
+function greetUser(name, age) {
+    return `Hello ${name}! You are ${age} years old.`;
+}
+
+const message = greetUser("Nikhil", 22);
+console.log(message);
+
+
+        -------------Method 2-------------
+
+
+function greetUser(name, age) {
+    return "Hello " + name + "! You are " + age + "  years old.";
+}
+const message = greetUser("Nikhil", 22);
+console.log(message);
+
+
+****************************************************************************************
+- Assignment #2
+    
+    Write a function that takes a new object as input which has `name` , `age`  and `gender` and greets the user with their gender (Hi `Mr/Mrs/Others` harkirat, your age is 21)
+
+
+-------------------------Method 1-------------------------
+
+function greetUser(user){
+    let tittle;
+    if(user.gender==="male"){
+        tittle="Mr";
+    }else if(user.gender==="female"){
+        tittle="Mrs";
+    }else{
+        tittle="Others";
+    }
+    return `Hi ${tittle} ${user.name}, your age is ${user.age}`;
+}
+const user = {
+    name: "Harkirat",
+    age: 21,
+    gender: "male"
+};
+console.log(greetUser(user));
+
+
+------------------------------Method 2------------------------------------
+
+
+function greetUser(name, age, gender) {
+    let title;
+    if (gender === "male") {
+        title = "Mr";
+    } else if (gender === "female") {
+        title = "Mrs";
+    } else {
+        title = "Others";
+    }
+    return `Hi ${title} ${name}, your age is ${age}`
+}
+
+console.log(greetUser("Harkirat", 21, "male"));
+
+*********************************************************************************
+
+        Assignment #3
+
+Write a function that takes a new object as input which has `name` , `age`  and `gender` and greets the user with their gender (Hi `Mr/Mrs/Others` harkirat, your age is 21) and Also tell the user if they are legal to vote or not
+
+----------------------------------------------------------------
+
+
+function greetUser(name, age, gender) {
+    let title;
+    if (gender === "male") {
+        title = "Mr";
+    } else if (gender === "female") {
+        title = "Mrs";
+    } else {
+        title = "Others";
+    }
+    let eligible;
+    if(age>=21){
+        eligible="allowed";
+    }else{
+        eligible="not allowed"
+    }
+
+    return `Hi ${title} ${name}, your age is ${age} and you are ${eligible} to vote`
+}
+
+console.log(greetUser("Harkirat",19, "male"));
